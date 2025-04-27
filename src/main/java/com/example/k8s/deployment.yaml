@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-rmm-agent
+  labels:
+     app: simple-rmm-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-rmm-agent
+  template:
+    metadata:
+      labels:
+        app: simple-rmm-agent
+    spec:
+      containers:
+      - name: simple-rmm-agent
+        image: AmbarBhore/simple-rmm-agent-java:latest
+        ports:
+        - containerPort: 8080
