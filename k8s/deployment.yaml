@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: simple-rmm-agent
-        image: AmbarBhore/simple-rmm-agent-java:latest
+        image: ambarbhore/simple-rmm-agent-java:latest
         ports:
         - containerPort: 8080
